@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WA Estampas</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #7f5af0, #ff79c6);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+        }
+        /* Estilos para o cabeçalho */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .logo img {
+            width: 150px;
+        }
+        /* Estilos para o menu de navegação */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        /* Mudar cor ao passar o mouse */
+        nav ul li a:hover {
+            color: #ff79c6;
+        }
+
+        /* Estilos para o banner */
+        .banner {
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin: 10px auto;
+            max-width: 1200px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        /* Estilos para a seção de produtos */
+        .products {
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
+        .card {
+            background-color: #fff;
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .buy-button {
+            background-color: #ff79c6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .buy-button:hover {
+            background-color: #ff47a3;
+        }
+
+        /* Estilos para o rodapé */
+        footer {
+            background: linear-gradient(135deg, #7f5af0, #ff79c6);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+    text-align: left;
+    margin: 0;
+}      
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Logo alinhada à esquerda -->
+        <div class="logo">
+            <img src="img/logomurilo.jpg" alt="WA Estampas Logo">
+        </div>
+        <!-- Menu de navegação alinhado à direita -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Canecas</a></li>
+                <li><a href="camisas.html">Camisas</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="cadastrar.html">Cadastrar</a></li>
+                <li><a href="personalizar.html">Personalize Aqui</a></li>
+                <li><a href="pagamento.html">Pagamento</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <h2>Bem-vindo à WA Estampas</h2>
+        <p>Estampas exclusivas e criativas para você!</p>
+    </section>
+
+    <section class="products">
+        <div class="card-container">
+            <div class="card">
+                <h3>Estampas Coloridas</h3>
+                <p>Designs vibrantes e cheios de vida para suas roupas.</p>
+                <button class="buy-button">Comprar Agora</button>
+            </div>
+            <div class="card">
+                <h3>Personalização</h3>
+                <p>Crie estampas personalizadas para eventos e ocasiões especiais.</p>
+                <button class="buy-button">Personalizar</button>
+            </div>
+            <div class="card">
+                <h3>Alta Qualidade</h3>
+                <p>Usamos materiais de alta qualidade para garantir durabilidade.</p>
+                <button class="buy-button">Saiba Mais</button>
+            </div>
+            <div class="card">
+                <h3>Alta Qualidade</h3>
+                <p>Usamos materiais de alta qualidade para garantir durabilidade.</p>
+                <button class="buy-button">Saiba Mais</button>
+            </div>
+            <div class="card">
+                <h3>Alta Qualidade</h3>
+                <p>Usamos materiais de alta qualidade para garantir durabilidade.</p>
+                <button class="buy-button">Saiba Mais</button>
+            </div>
+        </div>
+    </section>
+    <section class="products">
+        <div class="card-container">
+            <div class="card">
+                <h3>Estampas Coloridas</h3>
+                <p>Designs vibrantes e cheios de vida para suas roupas.</p>
+                <button class="buy-button">Comprar Agora</button>
+            </div>
+            <div class="card">
+                <h3>Personalização</h3>
+                <p>Crie estampas personalizadas para eventos e ocasiões especiais.</p>
+                <button class="buy-button">Personalizar</button>
+            </div>
+            <div class="card">
+                <h3>Alta Qualidade</h3>
+                <p>Usamos materiais de alta qualidade para garantir durabilidade.</p>
+                <button class="buy-button">Saiba Mais</button>
+            </div>
+            <div class="card">
+                <h3>Alta Qualidade</h3>
+                <p>Usamos materiais de alta qualidade para garantir durabilidade.</p>
+                <button class="buy-button">Saiba Mais</button>
+            </div>
+           </div>
+    </section>
+    <footer>
+        <p>© 2024 WA-Estampas. Todos os direitos reservados.</p>
+        <p>Desenvolvido por Alex Reis</p>
+    </footer>
+
+</body>
+</html>
