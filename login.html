@@ -17,8 +17,6 @@
             height: 100vh;
             position: relative;
         }
-
-        /* Botão Home */
         .home-button {
             position: absolute;
             top: 20px;
@@ -36,15 +34,12 @@
             justify-content: center;
             transition: background-color 0.3s ease;
         }
-
         .home-button:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
-
         .home-button:before {
-            content: '←'; /* Seta para voltar */
+            content: '←';
         }
-
         .login-container {
             background-color: rgba(0, 0, 0, 0.7);
             padding: 40px;
@@ -53,12 +48,10 @@
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
         .login-container h2 {
             margin-bottom: 20px;
             font-size: 24px;
         }
-
         .login-container input[type="text"],
         .login-container input[type="password"] {
             width: 100%;
@@ -68,7 +61,6 @@
             border: none;
             box-sizing: border-box;
         }
-
         .login-container input[type="submit"] {
             background-color: #ff79c6;
             color: white;
@@ -79,39 +71,55 @@
             width: 100%;
             transition: background-color 0.3s ease;
         }
-
         .login-container input[type="submit"]:hover {
             background-color: #ff47a3;
         }
-
         .login-container p {
             margin-top: 20px;
         }
-
         .login-container a {
             color: #ff79c6;
             text-decoration: none;
         }
-
         .login-container a:hover {
             text-decoration: underline;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+            display: none;
         }
     </style>
 </head>
 <body>
-    
-    <!-- Botão Home -->
+
     <a href="index.html" class="home-button" title="Voltar à tela inicial"></a>
 
     <div class="login-container">
         <h2>Login</h2>
-        <form action="dashboard.html" method="POST">
-            <input type="text" placeholder="Usuário" name="username" required>
-            <input type="password" placeholder="Senha" name="password" required>
+        <form id="loginForm">
+            <input type="text" placeholder="Usuário" name="username" id="username" required>
+            <input type="password" placeholder="Senha" name="password" id="password" required>
+            <p class="error-message" id="errorMsg">Usuário ou senha inválidos!</p>
             <input type="submit" value="Entrar">
         </form>
         <p>Não tem uma conta? <a href="cadastrar.html">Cadastre-se</a></p>
     </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            const errorMsg = document.getElementById('errorMsg');
+
+            if (!username || !password) {
+                errorMsg.style.display = 'block';
+                event.preventDefault();
+            } else {
+                errorMsg.style.display = 'none';
+            }
+        });
+    </script>
 
 </body>
 </html>
